@@ -26,7 +26,7 @@ def signupForm():
     Race = "Asian"
     Diabetic = request.args.get('Diabetic')
     PhysicalActivity = request.args.get('PhysicalActivity')
-    GenHealth = request.args.get('health')
+    GenHealth = int(request.args.get('health'))
     SleepTime = float(request.args.get('SleepTime'))
     Asthma = request.args.get('Asthma')
     KidneyDisease = request.args.get('KidneyDisease')
@@ -37,12 +37,13 @@ def signupForm():
           "DiffWalking": DiffWalking, "Sex": Sex, "AgeCategory": AgeCategory, "Race": Race,
           "Diabetic": Diabetic, "PhysicalActivity": PhysicalActivity, "GenHealth": GenHealth,
           "SleepTime": SleepTime, "Asthma": Asthma, "KidneyDisease": KidneyDisease, "SkinCancer": SkinCancer}
+
     df = bk.fillData(data)
+    # print(df.to_dict())
     df = bk.clean(df)
     result = bk.predict(df)
     predNN = pd.DataFrame(result)
     y_predNN = predNN.idxmax(axis=1)
-
     if y_predNN[0] == 0:
         out = 'ไม่มีแนวโน้มเป็นโรคหัวใจ'
     else:

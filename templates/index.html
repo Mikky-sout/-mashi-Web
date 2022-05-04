@@ -23,11 +23,9 @@
 			<div class="wizard-form">
 				<div class="wizard-header">
 					<h4>แบบประเมินความเสี่ยงต่อการเป็นโรคหัวใจ</h4>
-					<small>การแปลผลจากคะแนน</small>
-					<small>คะแนน = 0 : พบว่า คุณไม่มีความเสี่ยง “โรคเส้นเลือดหัวใจ”</small><br>
-					<small>คะแนนมากกว่า 2 ขึ้นไป : พบว่า มีความเสี่ยงโรคเส้นเลือดหัวใจ
-						และเกณฑ์ความเสี่ยงจะเพิ่มสูงขึ้นตามจำนวนคะแนน ที่เพิ่มขึ้นของคุณ
-						แนะนำให้ปรึกษาแพทย์ผู้เชี่ยวชาญ</small>
+					<small>กรุณาตอบคำถามตามความเป็นจริง</small>
+					<small>แบบสอบถามนี้อาจมีความคลาดเคลื่อน</small><br>
+					<small>หากผู้ตอบแบบสอบถามรู้สึกไม่สบายใจ ผู้จัดทำแนะนำให้รีบปรึกษาแพทย์โดยด่วน</small>
 				</div>
 				<form class="form-register" action="{{url_for('signupForm')}}" method="GET">
 
@@ -144,7 +142,7 @@
 														<td style="text-align: left;"><input type="checkbox" class="css_data_item8" id="vehicle1" name="AgeCategory" value="18-24">
 															<label for="vehicle1"> 18-24</label></td>
 														<td style="text-align: left;"><label for="vehicle1">
-															<input type="checkbox" class="css_data_item8" id="vehicle1" name="vehicle1" value="25-29">
+															<input type="checkbox" class="css_data_item8" id="vehicle1" name="AgeCategory" value="25-29">
 															<label for="vehicle1"> 25-29</label></label></td>
 														<td style="text-align: left;"><input type="checkbox" class="css_data_item8" id="vehicle1" name="AgeCategory" value="30-34">
 															<label for="vehicle1"> 30-34</label>
